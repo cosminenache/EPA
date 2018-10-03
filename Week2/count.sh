@@ -5,7 +5,9 @@
 
 #grep is used to search for a string:
 
-no_core_cpu=`grep -i processor /proc/cpuinfo | wc -l`
+#no_core_cpu=`grep -i processor /proc/cpuinfo | wc -l`
+
+no_core_cpu=$(grep -i processor /proc/cpuinfo | wc -l)
 
 if [ $no_core_cpu -lt $1 ] 
 	then exit
